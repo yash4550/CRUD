@@ -177,7 +177,7 @@ function App() {
               <br />
               <div>
                 <button className="save-button1" onClick={saveEditedItem}>
-                  Save Changes
+                  Save 
                 </button>
                 <button className="cancel-button" onClick={() => setIndex(null)}>
                   Cancel
