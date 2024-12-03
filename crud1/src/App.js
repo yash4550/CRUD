@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Swal from 'sweetalert2';  // Import SweetAlert2
 import 'sweetalert2/dist/sweetalert2.min.css'; // Import SweetAlert2 default CSS
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function App() {
   const [name, setName] = useState('');
@@ -205,13 +207,15 @@ function App() {
                 <td>{item.name}</td>
                 <td>{item.age}</td>
                 <td>
-                  <button className="edit-btn" onClick={() => openEditAlert(index)}>
-                    Edit
-                  </button>
-                  <button className="delete-btn" onClick={() => openDeleteAlert(index)}>
-                    Delete
-                  </button>
-                </td>
+            {/* Edit Button with Icon */}
+            <button className="edit-btn" onClick={() => openEditAlert(index)}>
+              <i className="fas fa-edit"></i> {/* Font Awesome Edit Icon */}
+            </button>
+            {/* Delete Button with Icon */}
+            <button className="delete-btn" onClick={() => openDeleteAlert(index)}>
+              <i className="fas fa-trash"></i> {/* Font Awesome Trash Icon */}
+            </button>
+          </td>
               </tr>
             );
           })}
